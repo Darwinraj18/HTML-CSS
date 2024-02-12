@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightgallery-js/1.4.0/css/lightgallery.min.css"></head>
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    body{
+        font-family: sans-serif;
+    }
+    ul{
+        list-style: none;
+    }
+    a{
+        text-decoration: none;
+        color: white;
+    }
+    h1{
+        color:aliceblue;
+        margin: 16px 0;
+        font-weight: 100;
+    }
+    h3{
+        margin: 8px 0;
+        font-weight: 800;
+    }
+    p{
+        margin:16px 0;
+        line-height: 1.75;
+        font-weight: 400;
+    }
+    img{
+        max-width: 90%;
+        width: 100%;
+        height: 100%;
+        margin-top: 15px;
+        margin-left: 23px;
+    }
+    header{
+        line-height: 100px;
+        background-color: azure;
+    }
+    nav{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 70%;
+        margin: 0 auto;
+        
+    }
+    nav ul li{
+        display: inline;
+        padding: 0 16px;
+    }
+    nav ul li a{
+        color: black;
+        font-size: 1rem;
+        font-weight: bolder;
+        font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
+    }
+    nav ul li a:hover{
+        color: rgb(246, 53, 53);
+    }
+    .container{
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        grid-template-rows: 100px auto 100px;
+        height: 100vh;
+    }
+    header{
+        background-color: rgb(255, 255, 255);
+        /* grid-column-start: 1;
+        grid-column-end: 4; */
+        grid-column-start: span 3;
+    }
+    aside{
+        background-color: rgb(235, 68, 7);
+       
+        grid-column-start: span 1;
+    }
+main {
+        background-color: rgb(255, 255, 255);
+        grid-column-start: span 2;
+    }
+    main .blog-post{
+        background-image: url(main.jpg);
+        background-repeat: no-repeat;
+        background-size: cover; /* Adjust according to your design preference */
+    background-position: center; /* Adjust according to your design preference */
+    color: #ffffff; /* Set text color for better visibility on the background */
+    padding: 20px; /* Add padding to create space around the content */
+    border-radius: 10px; 
+    height: 680px;
+    }
+    main .blog-post h1{
+        color: rgb(242, 61, 61);
+        font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        justify-content: center;
+        text-align: center;
+        font-size: 3.8rem;
+        
+    }
+    main .blog-post p{
+        color: rgb(249, 249, 249);
+        font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        font-size: 1rem;
+        
+    }
+    main .about{
+        background-image: url(main1.jpg);
+        background-repeat: no-repeat;
+        background-size: cover; /* Adjust according to your design preference */
+    background-position: center; /* Adjust according to your design preference */
+    color: #ffffff; /* Set text color for better visibility on the background */
+    padding: 20px; /* Add padding to create space around the content */
+    border-radius: 10px; 
+    height: 480px;
+    
+    
+    }
+    main .about{
+        color: rgb(242, 61, 61);
+        font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        justify-content: center;
+        text-align: center;
+        font-size: 3.8rem;
+    }
+    main .about h1{
+        color: rgb(237, 237, 237);
+        font-family:sans-serif;
+        justify-content: center;
+        text-align: center;
+        font-size: 2.4rem;
+        font-weight: 600;
+        margin-top: 50px;
+    }
+    main .about p{
+        color: rgb(249, 249, 249);
+        font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        font-size: 1.4rem;
+        font-weight: 500;
+        
+    }
+    .gallery{
+        display:flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        width:90%;
+        margin: 0 auto;
+    }
+    .gallery a{
+        height: 200px;
+        width: 300px;
+        margin: 20px;
+        border-radius: 5px;
+        overflow: hidden;
+    }
+    .gallery a img{
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+    }
+    .gallery a img:hover{
+     transform: scale(1.4);
+    }
+    footer{
+        background-color: rgb(7, 178, 235);
+       
+        grid-column-start: span 3;
+    }
+    @media (max-width: 768px) {
+    nav {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    nav ul {
+        width: 100%;
+        background-color: gray;
+        position: absolute;
+        top: 100px;
+        left: 0;
+        right: 0;
+        height: 40vh;
+        text-align: center;
+    }
+
+    .container {
+        grid-template-columns: 1fr;
+        grid-template-rows: 100px auto auto 100px;
+        width: 100%;
+    }
+
+    header,
+    aside,
+    main,
+    footer {
+        grid-column: span 1;
+    }
+}
+
+
+</style>
+<body>
+    <div class="container">
+        <header class="header">
+            <!-- <h1>header</h1> -->
+            <nav>
+                <div class="logo">
+<H2>logo</H2>
+                </div>
+                <ul>
+                    <li><a href="">Home</a></li>
+                    <li><a href="#" onclick="showAbout()">About</a></li>
+                </ul>
+            </nav>
+        </header>
+        <!-- <aside>
+            <h1>aside</h1>
+            <div class="post">
+                <ul>Tdending</ul>
+                <ul>
+                    <li><a href="">Lorem ipsum dolor sit amet.</a>
+                        <li><a href="">Lorem ipsum dolor sit amet.</a></li>
+                </li>
+                </ul>
+            </div>
+            <div class="post">
+                <ul>Recent</ul>
+                <ul>
+                    <li><a href="">Lorem ipsum dolor sit amet.</a>
+                        <li><a href="">Lorem ipsum dolor sit amet.</a></li>
+                        <li><a href="">Lorem ipsum dolor sit amet.</a></li>
+                        <li><a href="">Lorem ipsum dolor sit amet.</a></li>
+                </li>
+                </ul>
+
+            </div>
+        </aside> -->
+        <main>
+            <!-- <h1>main</h1> -->
+            <div class="blog-post">
+                <h1> THE CAR FROM FREATURE</h1>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem, enim! Nesciunt sed possimus veritatis blanditiis non itaque quibusdam numquam, eum asperiores accusantium quia illo suscipit quis vitae mollitia perspiciatis eaque!</p>
+            </div>
+
+            <div class="about"  id="about-section">
+                <h1>Luxury on Every Mile</h1>
+                <!-- <img src="main1.jpg" alt=""> -->
+              <p>"Experience the epitome of elegance and sophistication – luxury on every mile, a journey defined by refinement and timeless style."</p>
+            </div>
+
+            <!-- <div class="blog-post">
+                <div class="meta">
+                    <h1>Forest</h1>
+                    <h3>Lorem ipsum dolor sit amet consectetur adipisicing.</h3>
+                    <small>By<a href="">Admin</a>on sep 2020
+                    </small>
+                </div>
+                <div class="post">
+                    <img src="car.jpeg" alt="">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing.</p>
+                </div>
+            </div> -->
+
+            <script>
+                function showAbout() {
+                    document.querySelector('.blog-post').style.display = 'none';
+                    document.getElementById('about-section').style.display = 'block';
+                }
+            </script>
+            
+
+            <div class="gallery">
+                <a href="car.jpeg" data-lightbox="image-gallery"><img src="car.jpeg" alt="Image 1"></a>
+                <a href="car2.jpeg" data-lightbox="image-gallery"><img src="car2.jpeg" alt="Image 2"></a>
+                <a href="car5.jpeg" data-lightbox="image-gallery"><img src="car5.jpeg" alt="Image 2"></a>
+                <a href="car2.jpeg" data-lightbox="image-gallery"><img src="car2.jpeg" alt="Image 2"></a>
+                <!-- Add more images as needed -->
+            </div>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/lightgallery-js/1.4.0/js/lightgallery.min.js"></script>
+            <script>
+                // Initialize LightGallery
+                lightGallery(document.querySelector('.gallery'));
+            </script>
+            
+        </main>
+        <footer>
+            <!-- <h1>footer</h1> -->
+            <h4>&copy; 2001 2023</h4>
+        </footer>
+    </div>
+</body>
+</html>

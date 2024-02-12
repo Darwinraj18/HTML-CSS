@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    ul{
+        background-color: rgba(47, 155, 243, 0.906);
+        text-align: center;
+    }
+    li{
+        display:inline-block;
+        padding: 15px;
+        -webkit-text-fill-color: azure;
+      vertical-align: middle;
+    }
+    a{
+        text-decoration: none;
+    }
+    .btn {
+    float: right; /* Align the button to the right */
+    margin-top: 15px; /* Adjust the margin as needed */
+    margin-right: 15px; 
+    background-color: chartreuse;
+}
+h3 {
+    float: left; /* Align the button to the right */
+    margin-top: 15px; /* Adjust the margin as needed */
+    margin-right: 15px; 
+    /* Adjust the margin as needed */
+}
+@media (max-width:521px){
+    li,.btn{
+        font-size: 1.5rem;
+        flex: 0 1 auto;
+    }
+}
+</style>
+<body>
+  
+    <ul>
+        
+        <li><a href="#home">Home</a></li>
+        <li><a href="#news">News</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li><a href="#about">About</a></li>
+        <button class="btn"> sign in</button>
+      </ul>
+
+   
+</body>
+</html>
