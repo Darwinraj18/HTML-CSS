@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>service</title>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<style>
+    .service{
+         background: linear-gradient(to top, #fdcbf1 0%, #fdcbf1 1%, #e6dee9 100%);
+    }
+    .services{
+        
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 15px;
+        gap: 20px;
+        padding-bottom: 15px;
+        border-bottom: 5px solid rgb(254, 0, 178);
+    }
+    .services li{
+        border: 2px solid rgb(141, 139, 139);
+       border-radius: 5px;
+        text-align: center;
+        width: 70%;
+        padding-bottom: 35px;
+        /* padding-left: 50px; */
+    }
+    
+    .section-title{
+padding-right: 350px;
+padding-left: 100px;
+padding-top: 20px;        
+
+    }
+    .services h4{
+        padding-bottom: 4px;
+        padding-top:14px ;
+        color: #ff05a7;
+        font-size: 2rem;
+    }
+    ul {
+    list-style: none;
+    padding: 0;
+}
+.contact{
+    display: flex;
+    justify-content: center;
+}
+.form h2{
+    padding: 15px 15px 15px 15px;
+    font-size: 2rem;
+}
+    .form{
+        display: flex;
+        flex-direction: column;
+        box-shadow: #e6dee9;
+
+    }
+    .form label{
+      font-size: 1.3rem;
+
+    }
+    input[type=text], select, textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  resize: vertical;
+}
+input[type=email], select, textarea {
+  width: auto;
+  padding: 12px;
+  border: 1px solid #ccc;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  resize: vertical;
+}
+input[type=submit] {
+  background-color: #ff3bbe;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  cursor: pointer;
+  width: auto;
+  font-size: 1.3rem;
+  font-weight: bold;
+}
+   
+@media screen and (max-width: 500px) {
+        .services {
+            margin: 10px;
+        }
+
+        .services li {
+            width: 90%;
+            padding: 15px;
+        }
+
+        .section-title {
+            padding-right: 20px;
+            padding-left: 20px;
+        }
+    }
+   
+    @media screen and (min-width: 320px) and (max-width: 800px) {
+        .services {
+            margin: 20px;
+        }
+
+        .services li {
+            width: 80%;
+            padding: 20px;
+        }
+
+        .section-title {
+            padding-right: 50px;
+            padding-left: 50px;
+        }
+    }
+
+
+</style>
+<body>
+    <div class="container">
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="service .html">Service</a>
+            
+        </nav>
+    </div>
+    <div class="service">
+        <h3 class="section-title">Services</h3>
+        <ul class="services">
+            <li>
+                
+                <h4>Hosting Design</h4>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est, reprehenderit. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est, reprehenderit.</p>
+            </li>
+
+            <li>
+                <h4>Web Design</h4>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est, reprehenderit.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est, reprehenderit.</p>
+            </li>
+
+            <li>
+                <h4>UI/UX</h4>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est, reprehenderit.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est, reprehenderit.</p>
+            </li>
+        </ul>
+    </div>
+    <div class="contact">
+
+        <form action="/action_page.php" class="form">
+            <h2 style="color: #ff05a7;">Contact Us</h2>
+            <label for="fname">First Name</label>
+            <input type="text" id="fname" name="firstname" placeholder="Your name..">
+            <label for="fname">Email Id</label>
+            <input type="email" id="fname" name="Email" placeholder="Your email..">
+            <label for="subject">Subject</label>
+        <textarea id="subject" name="subject" placeholder="Write something.." style="height:170px"></textarea>
+        <input type="submit" value="Submit">
+    </div>
+</body>
+</html>

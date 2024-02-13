@@ -91,10 +91,10 @@ main {
     main .blog-post{
         background-image: url(main.jpg);
         background-repeat: no-repeat;
-        background-size: cover; /* Adjust according to your design preference */
-    background-position: center; /* Adjust according to your design preference */
-    color: #ffffff; /* Set text color for better visibility on the background */
-    padding: 20px; /* Add padding to create space around the content */
+        background-size: cover; 
+    background-position: center;
+    color: #ffffff; 
+    padding: 20px; 
     border-radius: 10px; 
     height: 680px;
     }
@@ -118,10 +118,10 @@ main {
     main .about{
         background-image: url(main1.jpg);
         background-repeat: no-repeat;
-        background-size: cover; /* Adjust according to your design preference */
-    background-position: center; /* Adjust according to your design preference */
-    color: #ffffff; /* Set text color for better visibility on the background */
-    padding: 20px; /* Add padding to create space around the content */
+        background-size: cover; 
+    background-position: center; 
+    color: #ffffff; 
+    padding: 20px; 
     border-radius: 10px; 
     height: 480px;
     
@@ -180,7 +180,9 @@ main {
        
         grid-column-start: span 3;
     }
-    @media (max-width: 768px) {
+
+
+    @media (max-width: 800px) {
     nav {
         flex-direction: column;
         align-items: center;
@@ -194,7 +196,7 @@ main {
         top: 100px;
         left: 0;
         right: 0;
-        height: 40vh;
+        height: 82px;
         text-align: center;
     }
 
@@ -203,7 +205,10 @@ main {
         grid-template-rows: 100px auto auto 100px;
         width: 100%;
     }
-
+    .blog-post h1{
+        margin-top: 80px;
+        font-size: 1.9rem;
+    }
     header,
     aside,
     main,
@@ -228,28 +233,7 @@ main {
                 </ul>
             </nav>
         </header>
-        <!-- <aside>
-            <h1>aside</h1>
-            <div class="post">
-                <ul>Tdending</ul>
-                <ul>
-                    <li><a href="">Lorem ipsum dolor sit amet.</a>
-                        <li><a href="">Lorem ipsum dolor sit amet.</a></li>
-                </li>
-                </ul>
-            </div>
-            <div class="post">
-                <ul>Recent</ul>
-                <ul>
-                    <li><a href="">Lorem ipsum dolor sit amet.</a>
-                        <li><a href="">Lorem ipsum dolor sit amet.</a></li>
-                        <li><a href="">Lorem ipsum dolor sit amet.</a></li>
-                        <li><a href="">Lorem ipsum dolor sit amet.</a></li>
-                </li>
-                </ul>
-
-            </div>
-        </aside> -->
+        
         <main>
             <!-- <h1>main</h1> -->
             <div class="blog-post">
@@ -263,18 +247,7 @@ main {
               <p>"Experience the epitome of elegance and sophistication – luxury on every mile, a journey defined by refinement and timeless style."</p>
             </div>
 
-            <!-- <div class="blog-post">
-                <div class="meta">
-                    <h1>Forest</h1>
-                    <h3>Lorem ipsum dolor sit amet consectetur adipisicing.</h3>
-                    <small>By<a href="">Admin</a>on sep 2020
-                    </small>
-                </div>
-                <div class="post">
-                    <img src="car.jpeg" alt="">
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing.</p>
-                </div>
-            </div> -->
+         
 
             <script>
                 function showAbout() {
