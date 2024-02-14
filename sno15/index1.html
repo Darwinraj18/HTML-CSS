@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightgallery-js/1.4.0/css/lightgallery.min.css"></head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightgallery-js/1.4.0/css/lightgallery.min.css">
+</head>
 <style>
     *{
         margin: 0;
@@ -177,10 +178,48 @@ main {
     }
     footer{
         background-color: rgb(7, 178, 235);
-       
         grid-column-start: span 3;
+        /* text-align: center; */
+        display: flex;
     }
+    .log{
+        padding: 30px 30px;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        font-style: oblique;
+        font-size: 1.3rem;
+    }
+footer .foot{
+    padding-left: 80px;
+} 
+footer .company{
+    padding-left: 80px;
+} 
+footer .sub{
+    padding-left: 80px;
+} 
+.sub form ul {
+    display: flex;
+    align-items: center;
+}
 
+.sub input[type="email"] {
+    flex-grow: 1;
+    margin-right: 10px; /* Adjust spacing between input and button */
+}
+
+.sub .btn {
+    background: var(--primary-color);
+    color: #fff;
+    padding: 0.8rem 1.5rem;
+    border: none;
+    cursor: pointer;
+    font-size: 1.1rem;
+    border-radius: 30px;
+}
+
+.sub .btn:hover {
+    background: var(--secondary-color);
+}
 
     @media (max-width: 800px) {
     nav {
@@ -209,12 +248,30 @@ main {
         margin-top: 80px;
         font-size: 1.9rem;
     }
+    
     header,
     aside,
     main,
     footer {
         grid-column: span 1;
     }
+    footer {
+        grid-template-columns: 1fr; /* Change the grid to a single column layout */
+    }
+    .foot{
+        
+    }
+    .foot,
+    .company,
+    .sub {
+        width: 100%; /* Make the content full width */
+        text-align: center; /* Center the content */
+    }
+
+    .sub input[type="email"] {
+        width: 80%; /* Adjust the input width for better responsiveness */
+    }
+
 }
 
 
@@ -272,8 +329,35 @@ main {
             
         </main>
         <footer>
-            <!-- <h1>footer</h1> -->
-            <h4>&copy; 2001 2023</h4>
+            <div class="log">
+                <h3>CARS</h3>
+         
+            </div>
+            <div class="foot">
+                <h3>Blog Post</h3>
+         <ul>
+            <li><a href="">Lorem ipsum dolor sit.</a></li>
+            <li><a href="">Lorem ipsum dolor sit.</a></li>
+            <li><a href="">Lorem ipsum dolor sit.</a></li>
+         </ul>
+            </div>
+            <div class="company">
+                <h3>company</h3>
+         <ul>
+            <li><a href="">About</a></li>
+            <li><a href="">privacy&policu</a></li>
+            <li><a href="">Lorem ipsum dolor sit.</a></li>
+         </ul>
+            </div>
+
+            <div class="sub">
+                <h3>Subscribe</h3>
+         <ul>
+            <li><a href="">Lorem ipsum dolor sit, amet consectetur adipisicing elit.</a></li>
+            <input type="email" id="fname" name="Email" placeholder="Your email.." required>
+            <button type="submit" class="btn">Subscribe</button>
+         </ul>
+            </div>
         </footer>
     </div>
 </body>
