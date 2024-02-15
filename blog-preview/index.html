@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | Blog preview card</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+*{
+  padding: 0;
+  margin: 0;
+}
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Figtree-Regular'), local('Figtree-Regular'),
+       url('assets/fonts/static/Figtree-SemiBold.ttf') format('woff2');
+}
+
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 700;
+  src: local('Figtree-Bold'), local('Figtree-Bold'),
+       url('assets/fonts/static/Figtree-ExtraBold.ttf') format('woff2');
+}
+body{
+  padding: 0;
+  margin: 0;
+background-color:#ffdb58;
+font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+box-sizing: border-box
+}
+    .container{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      margin: 20px auto;
+      background-color: white;
+      padding: 10px;
+      width: 30%;
+      height: 100%;
+      border-radius: 20px;
+      /* background-color: #f4d04e; */
+      box-shadow:  10px 10px rgb(0, 0, 0);
+    }
+     a{
+      text-decoration: none;
+      text-align: center;
+    }
+    .main-content .btn{
+      padding: 10px 20px;
+      background-color: rgb(254, 254, 79);
+      margin: 10px;
+      border-radius: 10px;
+      display: flex;
+      
+    }
+   
+    .main-content{
+      margin: 10px;
+    }
+    .main-content p{
+      padding: 10px;
+      margin-bottom: 0px;
+    }
+    .main-content img{
+      height: 100%;
+      border-radius: 8px;
+      width: 270px;
+      padding-left:22px;
+      padding-right: 22px;
+    }
+    .content h2{ 
+      padding: 20px;
+      margin: 25px;
+      margin-top: 0px;
+      margin-bottom: 0px;
+
+    }
+    .content p{
+      margin-top:0;
+      /* padding:5px; */
+      margin: 45px;
+      margin-top: 0px;
+      margin-bottom: 16px;
+    }
+    .end {
+    display: flex;
+    flex-direction: row;
+    padding-right: 150px;
+  }
+.end h5 {
+
+  text-align: center;
+  padding-top: 12px;
+  width: 100px;
+}
+  .end img {
+    margin-right: 10px;
+    width: 40px;
+  }
+
+  
+
+  @media (max-width:405px) {
+  body{
+    padding: 20px;
+    
+  }
+  .container {
+  margin: 20px; /* Adjust the value as needed */
+  padding: 15px; /* Optional: Add padding inside the container */
+   width: 100%;
+    box-sizing: border-box;
+    justify-content: space-around;
+  }
+  .main-content .btn{
+    margin: 20px;
+  }
+  .main-content img{
+    width: 250px;
+    height: 100%;
+  }
+  .main-content p{
+   margin: 17px;
+   padding: 5px;
+   font-size: 1rem;
+   margin-bottom:0px;
+  }
+  .content h2{
+    margin-top: 0;
+    padding-top: 10px;
+   padding-left: 25px;
+  white-space: nowrap; /* Prevent wrapping to multiple lines */
+  overflow: hidden; /* Hide any overflow content */
+  text-overflow: ellipsis;
+  padding-bottom: 0;
+  margin-bottom: 10px;
+  }
+  .content p{
+    margin-top: 0;
+    /* margin: 47px; */
+    padding: 10px;
+    padding-top: 0px;
+    margin-bottom: 8px;
+    /* margin-bottom: 8px; */
+    
+  }
+.end{
+  margin: 47px;
+  padding-left: 35px;
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+  
+}
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style>
+</head>
+<body>
+
+  <!-- Learning
+
+  Published 21 Dec 2023
+
+  HTML & CSS foundations
+
+  These languages are the backbone of every website, defining structure, content, and presentation.
+
+  Greg Hooper
+  
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">Your Name Here</a>.
+  </div> -->
+
+  <div class="container">
+    <div class="main-content">
+      <img src="mobile-design.jpg" alt="" style="color: aqua;">
+      <button class="btn"><a href="">Learning</a></button>
+      <p>publiched 21 Dec 2023</p>
+    </div>
+    <div class="content">
+      <h2>HTML&CSS Foundations</h2>
+      <p>The language are backbone of every website,defining structure and content and presentation</p>
+    </div>
+    <div class="end">
+      <img src="assets/images/image-avatar.webp" alt="">
+      <h5>Greg Hooper</h6>
+    </div>
+  </div>
+  
+</body>
+</html>
