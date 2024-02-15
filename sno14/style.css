@@ -302,6 +302,16 @@ a {
              box-sizing: border-box;
              background-color: rgba(254, 245, 253, 0.749)
          }
+         .btn {
+            background: var(--primary-color);
+            color: #fff;
+            padding: 0.8rem 1.5rem;
+            border: none;
+            cursor: pointer;
+            font-size: 1.1rem;
+            border-radius: 30px;
+            height: 30px;
+        }
          .services-content {
             list-style: none;
             padding: 10px 15px 10px 1px ;
