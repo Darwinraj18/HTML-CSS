@@ -1,229 +1,72 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Displays the site properly based on the user's device -->
-
     <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
-
     <title>Frontend Mentor | Blog preview card</title>
-
-    <!-- Feel free to remove these styles or customize in your own stylesheet 👍 -->
-    <style>
-        * {
-            padding: 0;
-            margin: 0;
-            box-sizing: border-box;
-        }
-
-        @font-face {
-            font-family: 'Inter';
-            font-style: normal;
-            font-weight: 400;
-            src: local('Figtree-Regular'), local('Figtree-Regular'),
-                url('assets/fonts/static/Figtree-SemiBold.ttf') format('woff2');
-        }
-
-        @font-face {
-            font-family: 'Inter';
-            font-style: normal;
-            font-weight: 700;
-            src: local('Figtree-Bold'), local('Figtree-Bold'),
-                url('assets/fonts/static/Figtree-ExtraBold.ttf') format('woff2');
-        }
-
-        body {
-            padding: 0;
-            margin: 0;
-            background-color: #ffdb58;
-            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-        }
-
-        .container {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            margin: 40px 20px auto 20px;
-            background-color: white;
-            padding: 10px;
-            /* width: 30%; */
-            height: 100%;
-            border-radius: 20px;
-            box-shadow: 10px 10px rgb(0, 0, 0);
-             box-sizing: border-box;
-        }
-
-        a {
-            text-decoration: none;
-            text-align: center;
-        }
-
-        .main-content .btn {
-            padding: 10px 20px;
-            background-color: rgb(254, 254, 79);
-            margin: 10px;
-            border-radius: 10px;
-            display: flex;
-        }
-
-        .main-content {
-            margin: 10px;
-        }
-
-        .main-content p {
-            padding: 10px;
-            margin-bottom: 0px;
-        }
-
-        .main-content img {
-            height: 100%;
-            border-radius: 8px;
-            width: 100%; /* Adjusted width to fill the container */
-        }
-
-        .content h2 {
-            padding: 20px;
-            margin: 25px;
-            margin-top: 0px;
-            margin-bottom: 0px;
-        }
-
-        .content p {
-            margin-top: 0;
-            margin: 45px;
-            margin-top: 0px;
-            margin-bottom: 16px;
-        }
-
-        .end {
-            display: flex;
-            flex-direction: row;
-            padding-right: 150px;
-        }
-
-        .end h5 {
-            text-align: center;
-            padding-top:20px;
-            width: 100px;
-        }
-
-        .end img {
-            margin-right: 10px;
-            width: 40px;
-        }
-
-        @media  (max-width: 375px) {
-            .container {
-                width: 100%;
-                margin: 40px 20px auto 20px;
-            }
-            .main-content .btn{
-              margin: 20px;
-            }
-            .main-content p{
-              margin: 10px;
-              margin-bottom: 0px;
-            }
-            .content h2{
-              margin-left:20px;
-              margin: 0px;
-              /* padding: 20px; */
-              white-space: nowrap;
-              overflow: hidden;
-              text-overflow: ellipsis;
-            }
-            .content p{
-              text-align: left;
-              margin: 24px;
-              margin-top: 0;
-            }
-            .container img{
-              padding: 20px;
-            }
-            .end img{
-             height:40%;
-             width: 50px;
-             padding:9px;
-            }
-            .end h4{
-              padding: 20px;
-            }
-        }
-        @media (max-width: 1400px) {
-  body {
-    padding: 20px;
-  }
-
-  .container {
-    margin: 20px auto;
-    padding: 15px;
-    width: 60%;
-    box-sizing: border-box;
-    align-items: center;
-    justify-content:center;
-  }
-
-  .main-content .btn {
-    margin: 0px;
-    align-items: flex-start;
-    padding-right: 20px;
-    margin-top: 12px;
-}
-
-
-  .main-content img {
-    width: 100%; 
-    height: auto; 
-    padding-left:0;
-    padding-top: 12px;
-  }
-
-  .main-content p {
-    margin: 0px;
-    padding: 5px;
-    font-size: 1rem;
-    margin-bottom: 0px;
-  }
-
-  .content h2 {
-    margin-top: 0;
-    margin-left: 113px;
-    padding-top: 10px;
-    padding-left: 25px;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    padding-bottom: 0;
-    margin-bottom: 10px;
-  }
-
-  .content p {
-    margin-left: 137px;
-    margin-top: 0;
-    padding: 5px;
-    padding-top: 0px;
-    margin-bottom: 8px;
-  }
-
-  .end {
-    margin: 20px; 
-    padding-left: 15px;
-  }
-}
-    </style>
 </head>
+<style>
+  body{
+    background-color: yellow;
+   
+  }
+.container{
+  background-color: white;
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+  padding: 20px 30px;
+  justify-content: space-between;
+  border-radius: 2rem;
+  margin: 20px auto;
+
+}
+.container >* {
+  margin-bottom: 1.2rem;
+}
+.container .btn{
+  padding: 10px;
+  width: 100px;
+  border-radius: 12px;
+  background-color: yellow;
+}
+.end{
+  display: flex;
+  flex-direction: row;
+  gap: 15px;
+}
+
+@media (max-width: 450px) {
+  .container {
+    width: 80%; 
+    padding: 15px; 
+  }
+  .content h2 {
+  font-size: medium;
+  font-weight: bold;
+  }
+.content p{
+  line-height: 1.3em;
+  font-size: 1.2rem;
+}
+  .end {
+    flex-direction: row; 
+  }
+  .end img{
+    height: 54px;
+  }
+}
+</style>
 
 <body>
 
     <div class="container">
-        <div class="main-content">
+  
             <img src="mobile-design.jpg" alt="" style="color: aqua;">
-            <button class="btn"><a href="">Learning</a></button>
+            <button class="btn">Learning</button>
             <p>Published 21 Dec 2023</p>
-        </div>
+      
         <div class="content">
             <h2>HTML & CSS Foundations</h2>
             <p>The languages are the backbone of every website, defining structure and content and presentation.</p>
