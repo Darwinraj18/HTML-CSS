@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.6.0/css/font-awesome.min.css" rel="stylesheet">
+  <title>Frontend Mentor | Newsletter sign-up form with success message</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
+
+body {
+    font-family: 'Roboto', sans-serif;
+    /* Additional styles for your body */
+}
+    .container{
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+      background-color: rgb(156, 116, 116);
+      margin: 20px auto;
+      width: 70%;
+      
+      padding: 20px;
+      border-radius: 30px;
+    }
+    .img {
+    border-radius: 20px;
+    overflow: hidden; /* Ensures that the border-radius is applied to the image */
+}
+/* label{
+  margin: 0px;
+  
+} */
+input[type="email"]{
+  /* margin: 25px; */
+  margin-top: 0px;
+  /* height: 15%; */
+  padding: 10px;
+  border-radius: 10px;
+  width: 60%;
+  height: 30px;
+}
+.btn{
+  /* margin: 25px; */
+  margin-top: 10px;
+  padding: 15px;
+  background-color: rgb(15, 7, 50);
+  color:white;
+  border-radius: 8px;
+  width: 65%;
+  font-size: 1rem;
+  text-align: center;
+}
+    .content{
+      margin: 35px;
+     margin-bottom:40px;
+    }
+    .content ul{
+      margin-bottom:30px;
+      margin: 10px;
+      padding:0px;
+    }
+    .content ul li{
+      margin:10px;
+    }
+    .content h1{
+      font-family: 'Roboto', sans-serif;
+      font-size:2.5rem;
+    }
+    /* .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); } */
+  </style>
+</head>
+<body>
+
+  <!-- Sign-up form start -->
+
+ <div class="container">
+<div class="content">
+<h1>Stay Updated !</h1>
+<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis quia magni asperiores?</p>
+<ul>
+  <li>
+    <i class="fa-solid fa-circle-check" style="color: #fd5858;"></i>
+    <p>Lorem ipsum, dolor sit amet consectetur adipisicing.</p>
+  </li>
+
+  <li>
+    <i class="fa-solid fa-circle-check" style="color: #fd5858;"></i>
+    <p>Lorem ipsum, dolor sit amet consectetur adipisicing.</p>
+    
+  </li>
+
+  <li>
+    <i class="fa-solid fa-circle-check" style="color: #fd5858;"></i>
+    <p>Lorem ipsum, dolor sit.</p>
+    
+  </li>
+</ul>
+
+<label for="email">Email Address</label><br><br>
+<input type="email" placeholder="Enter Email..">
+<button class="btn">Subscribe to monthly newsletter</button>
+
+</div>
+
+<div class="img">
+<img src="desktop-design.jpg" alt="">
+</div>
+
+ </div>
+
+  <!-- Sign-up form end -->
+
+  <!-- Success message start -->
+
+  <!-- Thanks for subscribing!
+
+  A confirmation email has been sent to ash@loremcompany.com. 
+  Please open it and click the button inside to confirm your subscription.
+
+  Dismiss message -->
+
+  <!-- Success message end -->
+  
+  <!-- <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">Your Name Here</a>.
+  </div> -->
+</body>
+</html>
