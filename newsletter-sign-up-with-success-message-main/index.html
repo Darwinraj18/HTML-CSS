@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
 
   <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
-  <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.6.0/css/font-awesome.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
   <title>Frontend Mentor | Newsletter sign-up form with success message</title>
 
   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
@@ -14,14 +14,18 @@
 
 body {
     font-family: 'Roboto', sans-serif;
+    background-color: rgba(4, 4, 63, 0.626);
     /* Additional styles for your body */
+}
+ li{
+list-style: none;
 }
     .container{
       display: flex;
       flex-direction: row;
       align-items: center;
       justify-content: center;
-      background-color: rgb(156, 116, 116);
+      background-color: rgb(255, 255, 255);
       margin: 20px auto;
       width: 70%;
       
@@ -29,6 +33,7 @@ body {
       border-radius: 30px;
     }
     .img {
+      order: 2;
     border-radius: 20px;
     overflow: hidden; /* Ensures that the border-radius is applied to the image */
 }
@@ -53,14 +58,68 @@ input[type="email"]{
   color:white;
   border-radius: 8px;
   width: 65%;
-  font-size: 1rem;
+  font-size: 0.8em;
+font-weight: bolder;
   text-align: center;
 }
     .content{
       margin: 35px;
      margin-bottom:40px;
+     order: 1;
     }
-    .content ul{
+    .content li{
+      margin-bottom: 16px;
+    
+    }
+
+    @media screen and (max-width: 768px) {
+      .container {
+        flex-direction: column;
+        width: 90%;
+      }
+      .content ul li p {
+        margin-bottom: 20px;
+}
+      .img {
+        order: 1;
+        margin-top: 20px;
+        width: 100%;
+      }
+
+      .content {
+        
+        margin: 20px;
+        order: 2;
+      }
+      
+.content p{
+  font-size: 1rem;
+}
+      input[type="email"] {
+        width: 90%;
+      }
+
+      .btn {
+        width: 100%;
+        font-size: 0.8em;
+        font-weight: bolder;
+      }
+    }
+
+    /* .msg{
+      background-color: rgb(255, 255, 255);
+      align-items: center;
+      justify-content: center;
+      width: 30%;
+      padding: 30px;
+      margin: 20px auto;
+      border-radius: 25px
+    }
+    .msg .btn{
+      padding: 16px;
+      width: 100%;
+    } */
+    /* .content ul{
       margin-bottom:30px;
       margin: 10px;
       padding:0px;
@@ -71,9 +130,10 @@ input[type="email"]{
     .content h1{
       font-family: 'Roboto', sans-serif;
       font-size:2.5rem;
-    }
+    } */
     /* .attribution { font-size: 11px; text-align: center; }
     .attribution a { color: hsl(228, 45%, 44%); } */
+
   </style>
 </head>
 <body>
@@ -86,27 +146,29 @@ input[type="email"]{
 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis quia magni asperiores?</p>
 <ul>
   <li>
-    <i class="fa-solid fa-circle-check" style="color: #fd5858;"></i>
-    <p>Lorem ipsum, dolor sit amet consectetur adipisicing.</p>
-  </li>
-
-  <li>
-    <i class="fa-solid fa-circle-check" style="color: #fd5858;"></i>
-    <p>Lorem ipsum, dolor sit amet consectetur adipisicing.</p>
+    
+      <i class="fa-solid fa-circle-check" style="color: #fd5858; display: inline-block; margin-right: 10px;"></i>
+    <p style="display: inline;">Lorem ipsum, dolor sit amet consectetur adipisicing.</p>
     
   </li>
 
   <li>
-    <i class="fa-solid fa-circle-check" style="color: #fd5858;"></i>
-    <p>Lorem ipsum, dolor sit.</p>
+    <i class="fa-solid fa-circle-check" style="color: #fd5858; display: inline-block; margin-right: 10px;"></i>
+    <p style="display: inline;">Lorem ipsum, dolor sit amet consectetur adipisicing.</p>
     
   </li>
+
+  <li>
+    <i class="fa-solid fa-circle-check" style="color: #fd5858; display: inline-block; margin-right: 10px;"></i>
+    <p style="display: inline;">Lorem ipsum, dolor sit amet consectetur adipisicing.</p>
+  </li>
+  
 </ul>
-
+<form action="sucess.html">
 <label for="email">Email Address</label><br><br>
 <input type="email" placeholder="Enter Email..">
 <button class="btn">Subscribe to monthly newsletter</button>
-
+</form>
 </div>
 
 <div class="img">
@@ -116,7 +178,13 @@ input[type="email"]{
  </div>
 
   <!-- Sign-up form end -->
-
+<!-- <div class="msg">
+  <h1>Thanks for <br>subscribing!</h1>
+  <p>A confirmation email has been sent to ash@loremcompany.com. 
+    Please open it and click the button inside to confirm your subscription.
+  </p>
+  <button class="btn"> Dismiss message</button>
+</div> -->
   <!-- Success message start -->
 
   <!-- Thanks for subscribing!

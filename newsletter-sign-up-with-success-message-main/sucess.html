@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+</head>
+<style>
+    body{
+        background-color: rgb(1, 1, 28);
+    }
+    .msg{
+      background-color: rgb(255, 255, 255);
+      align-items: center;
+      justify-content: center;
+      width: 30%;
+      padding: 30px;
+      margin: 20px auto;
+      border-radius: 25px
+    }
+    .msg .btn{
+      padding: 16px;
+      width: 100%;
+      background-color: rgb(244, 47, 47);
+      color: white;
+      border-radius: 15px;
+    }
+    .fa-solid.fa-circle-check {
+  color: #fd5858;
+  width: 100%; 
+  height: 60%;
+}
+
+    
+    @media (max-width:475px) {
+        body{
+        background-color: rgb(253, 253, 253);
+    }
+        .msg {
+            width: 70%;
+            margin: 20px auto;
+        }
+        .msg .btn{
+            margin-top: 70px;
+            border-radius: 16px;
+            background-color: rgba(1, 1, 35, 0.968);
+            border-radius: 15px;
+        }
+    }
+</style>
+<body>
+    <div class="msg">
+        <i class="fa-solid fa-circle-check" style="color: #fd5858; width:120px;"></i>
+        <h1>Thanks for <br>subscribing!</h1>
+        <p>A confirmation email has been sent to ash@loremcompany.com. 
+          Please open it and click the button inside to confirm your subscription.
+        </p>
+        <button class="btn"> Dismiss message</button>
+      </div>
+</body>
+</html>
