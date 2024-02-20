@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <title>Frontend Mentor | Intro section with dropdown navigation</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    *{
+      padding: 0;
+      margin:0;
+      text-decoration: none;
+      list-style: none;
+      box-sizing: border-box;
+    }
+    body{
+      font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+
+    }
+  
+  .logo{
+      font-family: 'Helvetica Neue';
+      color: rgb(12, 0, 0);
+      font-size: 35px;
+      font-weight: bolder;
+    padding: 20px 20px 20px 60px;
+    }
+    nav {
+  display: flex;
+  background-color: rgb(255, 255, 255);
+  height: 80px;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  
+}
+nav ul{
+  margin-right: 250px;
+}
+nav ul li {
+  margin-right: 10px;
+  line-height: 80px;
+  position: relative;
+  float: left;
+  margin-right: 110px;
+}
+
+nav ul li:hover .dropdown {
+  display: block;
+}
+
+.dropdown {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: rgb(230, 230, 230);
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  border-radius: 10px;
+  box-shadow: 3px 3px;
+}
+
+.dropdown li {
+  padding: 10px;
+  line-height: 1.5;
+  
+}
+
+.dropdown a {
+  color: rgba(4, 0, 0, 0.984);
+  text-decoration: none;
+}
+
+/* .dropdown a:hover {
+  text-decoration: underline;
+} */
+.dropdown li {
+  list-style: none;
+  /* display: inline-block; */
+}
+
+.container
+{
+  display: flex;
+  flex-direction: row;
+}
+.banner >*{
+  padding: 10px;
+  
+}
+.banner{
+align-items: center;
+display: flex;
+flex-direction:column;
+}
+.img img {
+  width: 80%; /* Adjust the percentage as needed */
+  max-width: 100%; /* Ensure the image does not exceed its original size */
+  height: auto; /* Maintain the aspect ratio */
+  display: block; /* Remove extra spacing below the image */
+  margin: auto; /* Center the image within its container */
+}
+
+.banner h1{
+  font-family:Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 3.9rem;
+ margin-top: 70px;
+  /* display: flex;
+  flex-direction:column; */
+}
+
+@media (max-width:786px) {
+  nav ul{
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    background-color: aliceblue;
+
+  }
+  nav ul li{
+    display: block;
+  }
+}
+
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+
+  </style>
+</head>
+<body>
+
+  <nav>
+    <label for="" class="logo">Snap</label>
+    <ul>
+      <li><a href="">Features</a>
+        <ul class="dropdown">
+          <li><i class="fa-solid fa-list-check"style="display: inline-block; margin-right:5px;"></i>
+            <a href="#" style="display: inline; position:absolute; ">TodoList</a></li>
+          <li>
+            
+            <i class="fa-solid fa-calendar-days" style="display: inline-block; margin-right: 5px;"></i>
+            <a href="#" style="display: inline; position:absolute; ">Calendar</a>
+
+            
+          <li><i class="fa-solid fa-bell"style="display: inline-block; margin-right: 5px;"></i>
+            <a href="#" style="display: inline; position:absolute; ">Reminder</a></li>
+          <li><i class="fa-solid fa-clock" style="display: inline-block; margin-right: 5px;"></i>
+            <a href="#" style="display: inline; position:absolute; ">Planning</a></li>
+                </ul>
+      </li>
+      <li><a href="">Company</a>
+        <ul class="dropdown">
+          <li><a href="#">History</a></li>
+          <li><a href="#">OurTeam</a></li>
+          <li><a href="#">Blog</a></li></ul>
+      <li><a href="">Careers</a></li>
+      <li><a href="">About</a></li>
+    </ul>
+    <li></li>
+  </nav>
+  <div class="container">
+  <div class="banner">
+    <h1>Make<br>remote work</h1>
+    <p>Get your team in sync, no matter your location.Streamline processes, 
+      create team rituals, and watch productivity soar.</p>
+
+      <button class="btn">Learn More</button></div>
+      <div class="img">
+        <img src="images/image-hero-desktop.png" alt=""> 
+      </div>
+      
+  </div>
+
+  <!-- Features
+  Company
+  Careers
+  About
+
+  Login
+  Register
+
+  Make remote work
+
+  Get your team in sync, no matter your location. Streamline processes, 
+  create team rituals, and watch productivity soar.
+
+  Learn more -->
+  
+  <!-- <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">Your Name Here</a>.
+  </div> -->
+</body>
+</html>
