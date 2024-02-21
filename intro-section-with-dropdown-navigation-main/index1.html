@@ -21,7 +21,7 @@
     }
     header ul.left {
             float: left;
-            margin-right:250px;
+            /* margin-right:250px; */
         }
 
         header .right {
@@ -68,7 +68,7 @@ float: left;
         }
         header ul li .dropdown{
         position: absolute;
-            left: 270px;
+            left: 470px;
             width: 200px;
             height: 100px;
             padding: 10px ;
@@ -82,7 +82,7 @@ float: left;
         }
         header ul li .dropdown2{
             position: absolute;
-            left: 300px;
+            left: 650px;
             width: 200px;
             background-color: rgb(255, 255, 255);
             border-radius: 9px;
@@ -98,15 +98,14 @@ float: left;
   flex-direction: row;
   
 }
-.banner >*{}
 .banner {
-    align-items: center;
+    align-items:flex-start;
     display: flex;
     flex-direction: column;
     padding: 20px;
 }
 .banner p{
-padding: 50px 70px;
+padding: 20px 10px;
 }
 .img img {
     width: 80%;
@@ -117,7 +116,8 @@ padding: 50px 70px;
 }
 .btn{
     padding: 10px;
-    margin-right: 350px;
+    margin-right: 300px;
+    border-radius: 12px;
 }
 
 .banner h1{
@@ -237,7 +237,8 @@ header ul li a {
         color: white;
     }
         .client{
-            width:100px
+            width:100%;
+            padding: 20px;
         }
         .banner {
             order: 2;
@@ -247,7 +248,28 @@ header ul li a {
             order: 1;
         }
     }
+    @media (min-width: 1900px) {
+    /* Your styles for screens with a minimum width of 1900 pixels go here */
+  header ul.left {
+    float: left;
+    /* margin-right: 250px; */
+}
 
+.banner >*{
+   padding: 16px;
+}
+.banner h1{
+    margin-top: 15%;
+}
+    .banner p {
+        font-size: 1.7rem;
+        padding: 10px 10px;
+         /* Adjust this value as needed */
+    }
+    .btn{
+        margin-left: 10px;
+    }
+}
 
 </style>
 <body>
