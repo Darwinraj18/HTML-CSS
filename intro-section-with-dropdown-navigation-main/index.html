@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+*{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: 'poppins',sans-serif;
+    }
+    body{
+        min-height: 100vh;
+    }
+    header nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    background-color: rgb(255, 253, 253);
+    position: absolute;
+    top: 66px;
+    right: 0;
+ /* Initial display is none, and it will be toggled later */
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+nav ul li {
+    display: flex;
+    flex-direction: column;
+    margin-left: 20px; /* Adjust margin between items as needed */
+}
+
+header img {
+    max-width: 100%;
+    height: auto;
+}
+
+nav ul li a {
+    color: black;
+    font-size: 1.1rem;
+    padding: 20px 24px;
+    text-decoration: none;
+    display: flex;
+    justify-content: space-between;
+}
+/* Add the following styles to your existing CSS */
+
+header nav ul li:hover ul,
+header nav ul li:hover .dropdown2 {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    background-color: rgb(255, 255, 255);
+    border-radius: 9px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    top: 100%; /* Adjust this value as needed */
+    left: 0;
+    width: 200px; /* Adjust the width as needed */
+    z-index: 1;
+}
+
+header nav ul li:hover ul li,
+header nav ul li:hover .dropdown2 li {
+    padding: 10px; /* Adjust padding as needed */
+    width: 100%; /* Adjust the width as needed */
+}
+
+header nav ul li:hover ul a,
+header nav ul li:hover .dropdown2 a {
+    color: black;
+    text-decoration: none;
+    display: flex;
+    justify-content: space-between;
+    font-size: 1rem; /* Adjust font size as needed */
+}
+
+.dropdown,
+.dropdown2 {
+    display: none;
+}
+
+/* Additional styles to improve the appearance */
+header nav ul li:hover ul li:hover,
+header nav ul li:hover .dropdown2 li:hover {
+    background-color: rgb(15, 119, 210); /* Adjust the background color as needed */
+    color: white; /* Adjust the text color as needed */
+}
+
+</style>
+    <body>
+        <header>
+            <img src="images/logo.svg" alt="">
+            <div class="menutoggle">
+                <img src="images/icon-menu.svg" alt="" id="menuIcon">
+                <img src="images/icon-close-menu.svg" alt="" id="closeIcon" style="display: none;">
+            </div>
+            <nav>
+                <ul class="left">
+                    <li><a href="">Features</a>
+                        <ul class="dropdown">
+                            <li>
+                                <img src="images/icon-todo.svg" alt="">
+                                <a href="#" style="display: inline; ">TodoList</a></li>
+    
+                            <li>
+                              <img src="images/icon-calendar.svg" alt="">
+                              <a href="#" style="display: inline; ">Calendar</a>
+                           </li>
+                              
+                            <li><img src="images/icon-reminders.svg" alt="">
+                              <a href="#" style="display: inline; ">Reminder</a></li>
+    
+                            <li>
+                                <img src="images/icon-planning.svg" alt="">
+                              <a href="#" style="display: inline;  ">Planning</a></li>
+                                  </ul>
+                    </li>
+                    <li><a href="">Company</a>
+                        <ul class="dropdown2">
+                            <li><a href="#">History</a></li>
+                            <li><a href="#">OurTeam</a></li>
+                            <li><a href="#">Blog</a></li></ul>
+                        
+                     
+                    </li>
+                        <li><a href="">About</a></li>
+                        <li><a href="">Careers</a></li>
+                        <!-- <li><a href="">login</a></li>
+                        <li><a href="">register</a></li> -->
+                </ul>
+                <ul class="right"> <li><a href="">login</a></li>
+                    <li><a href="" style="border:1px solid black; border-radius: 12px; margin-top:9px;padding: 9px;">Register</a></li></ul>
+            </nav>
+</body>
+</html>
