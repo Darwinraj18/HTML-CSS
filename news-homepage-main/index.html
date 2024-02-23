@@ -59,51 +59,52 @@
     background-color: rgb(6, 6, 6);
    }
  
-   /* .container > * {
-     margin: 40px 10px;
-} */
+   .container > * {
+     margin:10px 20px;
+}
    .container{
     display: flex;  
     justify-content: space-around;
     margin: 20px ;
    }
  
-   .main{
+   /* .main{
     padding: 20px;
-   }
+   } */
    .main img{
     display: flex;
     align-items: flex-start;
     width:100%;
-   
    }
 
-.main2{
+   .main2 {
   display: flex;
-  flex-direction: row;
+  
+  margin-top:10px;
+ gap: 30%;
+  
 }
 
 .main2 h1{
   text-align: left;
-  font-family:Georgia, 'Times New Roman', Times, serif;
-  width: 40%;
-}
-.main2 {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: flex-start;
-}
-.main2 p {
-  text-align: left;
-  width: 20%;
-  margin-bottom: 10px; /* Adjust margin as needed */
+font-family: 'Times New Roman', Times, serif;
+  width: 100%;
 }
 
-.btn {
+.main3{
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: flex-start;
+  margin-top:10px;
+ 
 }
+.main3 p {
+  text-align: left;
+  width: 100%; 
+}
+
+
 
 .side > *:not(:first-child) {
     margin-top: 20px; 
@@ -112,8 +113,8 @@
 
    .side{
     background-color: black;
-    position: relative;
-    top: 20px;
+    /* position: relative;
+    top: 10px; */
     color: aliceblue;
     padding: 10px;
     width: 300px;
@@ -123,12 +124,54 @@
     font-size: 1rem;
     white-space: nowrap;
     /* padding: 10px; */
+    color: aliceblue;
    }
    .side p{
     text-align:left;
+    color: aliceblue;
    }
-   
+   .bottom{
+    display: flex;
+    flex-direction:row;
+    background-color: rgb(255, 255, 255);
+    padding: 20px;
+    margin: 20px 50px;
+    justify-content: space-between;
+   }
+   .bottom img{
+    width:100px;
+    height: 100px;
+    position: relative;
+    top: 23px;
+   }
+   .card{
+    display: flex;
+    flex-direction: row;
+    width:100%
+   }
+
+   .carditem {
+    padding: 15px; 
+    margin: 10px; 
+    text-align:left;
+    /* float: right;
+    position: relative;
+    bottom: 90px;
+    left: 0px; */
+}
+
+.bottom h4,h3,p {
+    color: #333; /* Set color for h4 heading */
+    text-align: left;
+}
+
+
    @media (max-width:768px) {
+  
+    header{
+      width: 100%;
+      padding:0;
+    }
     .hamburger{
       display: block;
     }
@@ -162,11 +205,56 @@
     .container{
     display: flex;
     flex-direction: column;  
+    align-items: center;
    }
    .main img {
-    /* Add the path to your mobile image */
+   
     content: url('assets/images/image-web-3-mobile.jpg');
   }
+
+  .container > * {
+    margin: 10px 50px;
+}
+  
+  .main2{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  
+}
+.main2 h1{
+      word-break: normal;
+}
+.main3 p {
+  text-align: left;
+  width: 100%; 
+  font-size: 1rem;
+  white-space:wrap;
+  line-height: 1;
+}
+.bottom{
+    display: flex;
+    flex-direction:column;
+    background-color: rgb(255, 255, 255);
+    padding: 20px;
+    margin: 20px 50px;
+    justify-content: space-between;
+   }
+   .card{
+    display: flex;
+    flex-direction: column;
+    width:100%
+   }
+  
+    .carditem {
+    /* padding: 15px; 
+    margin: 10px;  */
+    text-align:left;
+    position: relative;
+    bottom: 90px;
+    left: 100px;
+
+   }
    }
     .attribution { font-size: 11px; text-align: center; }
     .attribution a { color: hsl(228, 45%, 44%); }
@@ -192,13 +280,14 @@
 <div class="container">
   <div class="main">
     <img src="assets/images/image-web-3-desktop.jpg" alt="">
-    <!-- <div class="main2">
+    <div class="main2">
       <h1>The Bright<br>Future of<br>Web 3.0?</h1>
-        <p>   We dive into the next evolution of the web that claims to put the power of the platforms back into the hands of the people. 
-          But is it really fulfilling its promise?
-        </p>
-      <button class="btn">Read More</button>
-    </div> -->
+      <div class="main3"><p>   We dive into the next evolution of the web that claims to put the power of the platforms back into the hands of the people. 
+          But is it really fulfilling its promise?  </p>
+          <button class="btn" style="background-color:rgb(248, 96, 96); padding:10px; border-radius:10px; margin: 5px;">Read More</button>
+      </div>
+    </div>
+    
   </div>
   <div class="side">
     <h2 style="color: gold;">NEW</h2>
@@ -212,6 +301,33 @@
     <p>Will hydrogen-fueled cars ever catch up to EVs?</p>
 
   </div>
+  </div>
+  <div class="bottom">
+    <div class="card">
+      <img src="assets/images/image-retro-pcs.jpg" alt="">
+     <div class="carditem">
+        <h3 style="color: gray;font-size:2rem;">01</h3>
+        <h4>Reviving Retro PCs</h4>
+        <p>What happens when old PCs are given modern upgrades?</p>
+      </div>
+    </div>
+      <div class="card">
+        <img src="assets/images/image-top-laptops.jpg" alt="">
+       <div class="carditem">
+          <h3 style="color: gray;font-size:2rem;">01</h3>
+          <h4>Reviving Retro PCs</h4>
+          <p>What happens when old PCs are given modern upgrades?</p>
+        </div>
+
+      <div class="card">
+        <img src="assets/images/image-gaming-growth.jpg" alt="">
+       <div class="carditem">
+          <h3 style="color: gray;font-size:2rem;">01</h3>
+          <h4>Reviving Retro PCs</h4>
+          <p>What happens when old PCs are given modern upgrades?</p>
+        </div>
+
+    </div>
 </div>
 <script>
  document.addEventListener("DOMContentLoaded", function() {
