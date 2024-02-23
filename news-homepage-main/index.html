@@ -15,7 +15,7 @@
       margin:0;
       padding: 0;
       box-sizing: border-box;
-      font-family: 'Courier New', Courier, monospace;
+      /* font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif; */
       text-decoration: none;
       text-align: center;
     }
@@ -89,6 +89,7 @@
   text-align: left;
 font-family: 'Times New Roman', Times, serif;
   width: 100%;
+  font-size: 2.5rem;
 }
 
 .main3{
@@ -101,7 +102,7 @@ font-family: 'Times New Roman', Times, serif;
 }
 .main3 p {
   text-align: left;
-  width: 100%; 
+  width: 100%;
 }
 
 
@@ -131,42 +132,33 @@ font-family: 'Times New Roman', Times, serif;
     color: aliceblue;
    }
    .bottom{
+    flex-direction: row;
     display: flex;
-    flex-direction:row;
     background-color: rgb(255, 255, 255);
-    padding: 20px;
+    /* padding: 20px; */
     margin: 20px 50px;
     justify-content: space-between;
    }
-   .bottom img{
-    width:100px;
-    height: 100px;
-    position: relative;
-    top: 23px;
+   .card img{
+    width:150px;
+    height: 200px;
+  
    }
    .card{
     display: flex;
-    flex-direction: row;
-    width:100%
+    flex-direction:row;
+    width:100%;
+    gap:10px;
+    padding:0px;
    }
 
-   .carditem {
-    padding: 15px; 
-    margin: 10px; 
-    text-align:left;
-    /* float: right;
-    position: relative;
-    bottom: 90px;
-    left: 0px; */
-}
-
 .bottom h4,h3,p {
-    color: #333; /* Set color for h4 heading */
+    color: #333; 
     text-align: left;
 }
 
 
-   @media (max-width:768px) {
+   @media (max-width:968px) {
   
     header{
       width: 100%;
@@ -215,7 +207,9 @@ font-family: 'Times New Roman', Times, serif;
   .container > * {
     margin: 10px 50px;
 }
-  
+  .side{
+    width: 100%;
+  }
   .main2{
   display: flex;
   flex-direction: column;
@@ -233,31 +227,27 @@ font-family: 'Times New Roman', Times, serif;
   line-height: 1;
 }
 .bottom{
-    display: flex;
-    flex-direction:column;
-    background-color: rgb(255, 255, 255);
-    padding: 20px;
-    margin: 20px 50px;
-    justify-content: space-between;
-   }
-   .card{
-    display: flex;
-    flex-direction: column;
-    width:100%
-   }
-  
-    .carditem {
-    /* padding: 15px; 
-    margin: 10px;  */
-    text-align:left;
-    position: relative;
-    bottom: 90px;
-    left: 100px;
+  display: flex;
+  flex-direction:column;
+  background-color: rgb(255, 255, 255);
+  flex-basis: 40%;
+  margin: 10px 20px;
+ 
+ 
+ }
+ .card{
+  display: flex;
+  flex-direction:row;
+  /* width:50% */
+  margin: 20px;
+ }
 
+  .carditem h1,h3,p {
+    white-space: wrap;
+    line-height: 1;
+ }
    }
-   }
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
+    
   </style>
 </head>
 <body>
@@ -269,6 +259,7 @@ font-family: 'Times New Roman', Times, serif;
       <li class="navitem"><a href="">New</a></li>
       <li class="navitem"><a href="">Popular</a></li>
       <li class="navitem"><a href="">Trending</a></li>
+      <li class="navitem"><a href="">Categories</a></li>
     </ul>
     <div class="hamburger">
       <span class="bar"></span>
@@ -284,7 +275,7 @@ font-family: 'Times New Roman', Times, serif;
       <h1>The Bright<br>Future of<br>Web 3.0?</h1>
       <div class="main3"><p>   We dive into the next evolution of the web that claims to put the power of the platforms back into the hands of the people. 
           But is it really fulfilling its promise?  </p>
-          <button class="btn" style="background-color:rgb(248, 96, 96); padding:10px; border-radius:10px; margin: 5px;">Read More</button>
+          <button class="btn" style="background-color:rgb(248, 96, 96); padding:10px;color: white;">Read More</button>
       </div>
     </div>
     
@@ -294,7 +285,7 @@ font-family: 'Times New Roman', Times, serif;
     <h3>Hydrogen VS Electric Cars</h3>
     <p>Will hydrogen-fueled cars ever catch up to EVs?</p>
     <hr>
-    <h3>Hydrogen VS Electric Cars</h3>
+    <h3>The Downsides of AI Artistry</h3>
     <p>Will hydrogen-fueled cars ever catch up to EVs?</p>
     <hr>
     <h3>Hydrogen VS Electric Cars</h3>
@@ -305,30 +296,32 @@ font-family: 'Times New Roman', Times, serif;
   <div class="bottom">
     <div class="card">
       <img src="assets/images/image-retro-pcs.jpg" alt="">
-     <div class="carditem">
+      <!-- <img src="main1.jpg" alt=""> -->
+      <div class="carditem">
         <h3 style="color: gray;font-size:2rem;">01</h3>
         <h4>Reviving Retro PCs</h4>
         <p>What happens when old PCs are given modern upgrades?</p>
       </div>
     </div>
-      <div class="card">
-        <img src="assets/images/image-top-laptops.jpg" alt="">
-       <div class="carditem">
-          <h3 style="color: gray;font-size:2rem;">01</h3>
-          <h4>Reviving Retro PCs</h4>
-          <p>What happens when old PCs are given modern upgrades?</p>
-        </div>
-
-      <div class="card">
-        <img src="assets/images/image-gaming-growth.jpg" alt="">
-       <div class="carditem">
-          <h3 style="color: gray;font-size:2rem;">01</h3>
-          <h4>Reviving Retro PCs</h4>
-          <p>What happens when old PCs are given modern upgrades?</p>
-        </div>
-
+    <div class="card">
+      <img src="assets/images/image-top-laptops.jpg" alt="">
+      <!-- <img src="main1.jpg" alt=""> -->
+      <div class="carditem">
+        <h3 style="color: gray;font-size:2rem;">02</h3>
+        <h4>Reviving Retro PCs</h4>
+        <p>What happens when old PCs are given modern upgrades?</p>
+      </div>
     </div>
-</div>
+    <div class="card">
+      <img src="assets/images/image-gaming-growth.jpg" alt="">
+      <!-- <img src="main1.jpg" alt=""> -->
+      <div class="carditem">
+        <h3 style="color: gray;font-size:2rem;">03</h3>
+        <h4>Reviving Retro PCs</h4>
+        <p>How the pandemic has sparked fresh opportunities.</p>
+      </div>
+    </div>
+  </div></div>
 <script>
  document.addEventListener("DOMContentLoaded", function() {
   const hamburger = document.querySelector(".hamburger");
