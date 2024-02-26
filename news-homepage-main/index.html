@@ -6,6 +6,8 @@
 
   <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap">
 
   <title>Frontend Mentor | News homepage</title>
 
@@ -15,7 +17,7 @@
       margin:0;
       padding: 0;
       box-sizing: border-box;
-      /* font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif; */
+      font-family: 'Roboto', sans-serif;
       text-decoration: none;
       text-align: center;
     }
@@ -105,7 +107,18 @@ font-family: 'Times New Roman', Times, serif;
   width: 100%;
 }
 
-
+.btn {
+  background-color: rgb(248, 96, 96);
+  padding:5px;
+  color: white;
+  border: none;
+  /* border-radius: 5px; */
+  font-size: 1.2rem;
+  cursor: pointer;
+  font-size:0.9rem;
+  transition: background-color 0.3s ease-in-out;
+  /* width: 130px; */
+}
 
 .side > *:not(:first-child) {
     margin-top: 20px; 
@@ -138,7 +151,7 @@ font-family: 'Times New Roman', Times, serif;
     /* padding: 20px; */
     margin: 20px 50px;
     justify-content: space-between;
-   }
+  }
    .card img{
     width:150px;
     height: 200px;
@@ -155,8 +168,11 @@ font-family: 'Times New Roman', Times, serif;
 .bottom h4,h3,p {
     color: #333; 
     text-align: left;
+    /* padding: 10px; */
 }
-
+.carditem h4,h3,p{
+  padding:9px;
+}
 
    @media (max-width:968px) {
   
@@ -275,7 +291,7 @@ font-family: 'Times New Roman', Times, serif;
       <h1>The Bright<br>Future of<br>Web 3.0?</h1>
       <div class="main3"><p>   We dive into the next evolution of the web that claims to put the power of the platforms back into the hands of the people. 
           But is it really fulfilling its promise?  </p>
-          <button class="btn" style="background-color:rgb(248, 96, 96); padding:10px;color: white;">Read More</button>
+          <button class="btn">READ MORE</button>
       </div>
     </div>
     
