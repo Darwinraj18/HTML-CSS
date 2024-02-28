@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+ .bottom{
+    flex-direction: row;
+    display: flex;
+    background-color: rgb(255, 255, 255);
+    padding: 20px;
+    margin: 20px 50px;
+    justify-content: space-between;
+   }
+   .card img{
+    width:150px;
+    height: 200px;
+  
+   }
+   .card{
+    display: flex;
+    flex-direction:row;
+    width:100%;
+    gap:10px;
+    padding:0px;
+   }
+
+   .carditem {
+  
+}
+
+.bottom h4,h3,p {
+    color: #333; 
+    text-align: left;
+}
+
+@media (max-width:768px) {
+  
+
+.bottom{
+  display: flex;
+  flex-direction:column;
+  background-color: rgb(255, 255, 255);
+  flex-basis: 40%;
+  margin: 10px 20px;
+  overflow-x: scroll;
+  scroll-snap-type: x mandatory;
+  white-space: nowrap;
+ 
+ }
+ .card{
+  display: flex;
+  flex-direction:row;
+  /* width:50% */
+  margin: 20px;
+  scroll-snap-align: start;
+  flex: 0 0 100%; /* Make each child take up the full width of the container */
+  height: 100vh;
+ }
+
+  .carditem h1,h3,p {
+    white-space: nowrap;
+    line-height: 1;
+ }
+ }
+  
+</style>
+
+<body>
+    <div class="bottom">
+        <div class="card">
+          <!-- <img src="assets/images/image-retro-pcs.jpg" alt=""> -->
+          <img src="main1.jpg" alt="">
+          <div class="carditem">
+            <h3 style="color: gray;font-size:2rem;">01</h3>
+            <h4>Reviving Retro PCs</h4>
+            <p>What happens when old PCs are given modern upgrades?</p>
+          </div>
+        </div>
+        <div class="card">
+          <!-- <img src="assets/images/image-top-laptops.jpg" alt=""> -->
+          <img src="main1.jpg" alt="">
+          <div class="carditem">
+            <h3 style="color: gray;font-size:2rem;">02</h3>
+            <h4>Reviving Retro PCs</h4>
+            <p>What happens when old PCs are given modern upgrades?</p>
+          </div>
+        </div>
+        <div class="card">
+          <!-- <img src="assets/images/image-gaming-growth.jpg" alt=""> -->
+          <img src="main1.jpg" alt="">
+          <div class="carditem">
+            <h3 style="color: gray;font-size:2rem;">03</h3>
+            <h4>Reviving Retro PCs</h4>
+            <p>How the pandemic has sparked fresh opportunities.</p>
+          </div>
+        </div>
+      </div>
+      
+</body>
+</html>

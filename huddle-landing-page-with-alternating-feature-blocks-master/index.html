@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | Huddle landing page with alternating feature blocks</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+  *{
+      margin:0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+      text-decoration: none;
+      /* text-align: center; */
+    }
+    nav{
+      margin: 20px 20px;
+      height:10% ;
+    }
+    .container{
+      
+      background-image: url(images/bg-hero-desktop.svg); 
+       background-size: cover; 
+      background-position: center; 
+    
+
+    }
+    .main1{
+      height: 10%;
+      padding: 10px;
+      margin: 20px 20px;
+    }
+    .main2 > *{
+      margin: 24px 24px;
+    }
+    .main2{
+      height:70vh;
+      display: flex;
+      flex-direction: row;
+      
+      margin: 20px;
+
+    }
+    .main2{
+      display: flex;
+      flex-direction: row;
+    }
+    .main2txt > *{
+      padding:20px;
+      /* border:1px solid navy; */
+    }
+   .main2img img{
+     width: 100%;
+    }
+  
+    .btn {
+    display: flex;
+    float: right;
+    border: none;
+  color: white;
+  border-radius:30px;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  background-color: #88cbe8;
+  font-size: 16px;
+  margin: 4px 2px;
+}
+
+    .main3{
+      /* border: 1px solid rgb(4, 53, 0); */
+      margin: 20px auto;
+      display: flex;
+      flex-direction: column;
+      position: relative;
+      top:100px;
+      margin-bottom: 160px;
+    }
+.box > * {
+  padding: 20px;
+}
+    .box{
+      margin: 20px 20px;
+      /* border: 1px solid rgb(205, 0, 0); */
+      background-color: rgb(255, 255, 255);
+      box-shadow: 10px 10px 5px gainsboro;
+      /* width: 70%; */
+      display: flex;
+     border-radius: 10px;
+      gap: 20px;
+      height: 60%;
+      padding: 20px 20px;
+      align-items: center;  
+      border: 0.8px solid black;
+    }
+     .boxtxt{
+      /* border: 1px solid rgb(22, 29, 235); */
+      justify-content: space-between;
+      padding: 20px;
+      order: 1;
+    }
+    .boximg{
+      /* border: 1px solid rgb(2, 3, 15); */
+      width: 50%;
+      height: 100%;
+      /* float: right; */
+    }
+    .boximg img{
+      /* border: 1px solid rgb(2, 3, 15); */
+      width: 100%;
+      height: 100%;
+      order: 2;
+      /* float: right; */
+    }
+    .footer {
+      background-color: cadetblue;
+      width: 100%;
+      height: auto;
+      padding: 20px; /* Adjust the padding as needed */
+      color: white; /* Set text color */
+      text-align: center;
+    }
+    .footerbox{
+      background-color: rgb(255, 255, 255);
+      height: 150px;
+      width: 40%;
+      position: relative;
+      top:70px;
+      left: 30%;
+      border-radius: 20px;
+      box-shadow: 10px 10px 5px rgb(132, 132, 132);
+      border: 1px solid rgb(4, 4, 0);
+      display: flex;
+      flex-direction: column;
+      padding: 20px;
+      align-items: center;
+    }
+    .footerbox h2{
+      padding: 10px;
+    }
+    .f1{
+      display: flex;
+      flex-direction: row;
+      justify-content: space-evenly;
+      margin-top: 10%;
+    }
+   .f1 .ul li {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  /* margin-top: 40px; */
+  /* gap: 20px; */
+}
+.info{
+  text-align: left;
+  margin-top: 100px;
+ 
+}
+.info p{
+  padding: 10px;
+}
+.f1  > *{
+  padding: 20px;
+  
+}
+.ul li i {
+  margin-right: 10px; 
+}
+.ul li{
+  list-style: none;
+  text-decoration: none;
+}
+.ul li p {
+  text-align: left;
+
+}
+.social-icons {
+  list-style: none;
+  /* padding: 10px;
+  margin: 20px; */
+  display: flex;
+}
+
+.social-icons li {
+ 
+  margin-top: 100px; 
+}
+
+.social-icons i {
+  font-size: 24px; 
+  color: #ffffff; 
+  padding: 10px;
+}
+    @media (max-width:900px) {
+      .main1 img{
+        width: 150px;
+      }
+     .main1 .btn{
+      width: auto;
+      }
+  .main2 {
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    margin: 20px;
+  }
+.main2txt{
+  text-align: center;
+}
+  .main2 img {
+    height: 50%;
+    
+  }
+  .main3{
+      
+      margin: 20px auto;
+      display: flex;
+      flex-direction: column;
+      /* position: relative;
+      top:100px; */
+    }
+  .box {
+    margin: 20px;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 10px 10px 5px gainsboro;
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px;
+    gap: 20px;
+    height: 60%;
+    padding: 20px;
+    align-items: center;
+    border: 0.8px solid black;
+  }
+
+  .boxtxt {
+    justify-content: space-between;
+    text-align: center;
+    padding: 20px;
+    order: 2;
+  }
+
+  .boximg {
+    width: 50%;
+    height: 100%;
+  }
+
+  .boximg img {
+    width: 100%;
+    height: 100%;
+    order: 1;
+  }
+
+  .footerbox {
+  
+    height: 150px;
+    width: 70%;
+    position: relative;
+    top: 80px;
+    left: 50px;
+    border-radius: 20px;
+    box-shadow: 10px 10px 5px rgb(132, 132, 132);
+    border: 1px solid rgb(4, 4, 0);
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    align-items: center;
+  }
+  .footer .f1 {
+    flex-direction: column; /* Stack the items vertically */
+    gap: 8px;
+    justify-content: space-between;
+    margin-top: 60px;
+  }
+  .social-icons{
+   display: flex;
+   justify-content: center;
+  }
+ 
+    .info {
+    text-align: left;
+    margin-top: 0px;
+    padding: 27px;
+}
+.footerbox h2 {
+    white-space: nowrap;
+    font-size: 1rem;
+  }
+      
+}
+
+    
+  </style>
+</head>
+<body>
+  <!-- <img src="images/bg-hero-desktop.svg" alt=""> -->
+  <div class="container">
+    <div class="main1">
+    <img src="images/logo.svg" alt="">
+    <button class="btn">Try it Free</button>
+
+    </div>
+    <div class="main2">
+      <div class="main2txt">
+        <h1>  Build The Community <br>Your Fans Will Love</h1>
+        <p>Huddle re-imagines the way we build communities. You have a voice, but so does your audience. 
+          Create connections with your users as you engage in genuine discussion. 
+        </p>
+    <button style="background-color: #FE52C0; border-radius: 30px; height: 40px; width: 60%;  padding: 10px; border: 0; color: white; font-size: 1rem; box-shadow: 10px 10px 5px rgba(0, 0, 0, 0.1);">Get Started For Free</button>
+   
+  </div>
+  <img src="images/illustration-mockups.svg" alt="">
+  <!-- <div class="main2img">
+       <img src="images/illustration-mockups.svg" alt="">
+  </div> -->
+ 
+  </div>
+
+</div>
+
+
+  <div class="main3" style="background-color: rgb(255, 255, 255); width: 100%;">
+      <div class="box">
+      <div class="boxtxt">
+        <h1> Grow Together</h1>
+        <p> Generate meaningful discussions with your audience and build a strong, loyal community. 
+          Think of the insightful conversations you miss out on with a feedback form. 
+        </p>
+      </div>
+        <div class="boximg">
+      <img src="images/illustration-grow-together.svg" alt="">
+
+        </div>
+
+          </div>
+
+          <div class="box">
+            <div class="boximg">
+              <img src="images/illustration-flowing-conversation.svg" alt="">
+                </div>
+            <div class="boxtxt">
+              <h1> Flowing Conversations</h1>
+              <p> You wouldn't paginate a conversation in real life, so why do it online? Our threads 
+                have just-in-time loading for a more natural flow
+              </p>
+            </div>
+                </div>
+
+                <div class="box">
+                  <div class="boxtxt">
+                    <h1> Your Users</h1>
+                    <p>   It takes no time at all to integrate Huddle with your app's authentication solution. 
+                      This means, once signed in to your app, your users can start chatting immediately.
+                    </p>
+                  </div>
+                    <div class="boximg">
+                  <img src="images/illustration-your-users.svg" alt="">
+                    </div>
+                      </div>
+    </div>
+
+<div class="footerbox">
+  <h2>Ready To Build Your Community</h2>
+  <button style="background-color: #FE52C0; border-radius: 30px; height: 40px; width: 60%; padding: 10px; border: 0; box-shadow: 10px 10px 5px rgba(0, 0, 0, 0.1);">Get Started For Free</button>
+
+</div>
+    <footer   class="footer" style="background-color: rgba(3, 66, 54, 0.742);"> 
+      <div class="f1">
+        <ul class="ul">
+         <li> <img src="images/logo.svg" alt=""></li>
+          <li>    <i class="fa-solid fa-location-dot"></i>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.<br>
+               Sapiente fugit ab consequuntur officia dolorem dolorum non!</p></li>
+               
+               
+               <li>
+          <li>
+
+            <i class="fa-solid fa-envelope"></i>
+            <p>example@Huddle.com</p>
+          </li>
+          <li>
+                <i class="fa-solid fa-phone"></i>
+                <p>1200989802</p>
+              </li>
+        </ul>
+        <div class="info">
+          <p>About us</p>
+          <p>What we do</p>
+          <p>FAQ</p>
+        </div>
+
+        <div class="info">
+          <p>carrer</p>
+          <p>Blog</p>
+          <p>Contact us</p>
+        </div>
+
+        <ul class="social-icons">
+          <li><i class="fab fa-facebook"></i></li>
+          <li><i class="fab fa-twitter"></i></li>
+          <li><i class="fab fa-instagram"></i></li>
+
+        </ul>
+      </div>
+    </footer>
+
+
+
+</body>
+</html>

@@ -41,7 +41,7 @@ list-style: none;
   margin: 0px;
   
 } */
-input[type="email"]{
+input[type="email"],[type="username"]{
   /* margin: 25px; */
   margin-top: 0px;
   /* height: 15%; */
@@ -168,10 +168,13 @@ font-weight: bolder;
   </li>
   
 </ul>
-<form action="sucess.html">
+<form action="" method="post">
 <label for="email">Email Address</label><br><br>
-<input type="email" placeholder="Enter Email..">
-<button class="btn">Subscribe to monthly newsletter</button>
+<input type="email" placeholder="Enter Email.." name="email" value="email"><br><br>
+
+<label for="username">User Name</label><br><br>
+<input type="text" placeholder="Enter username.." name="username" value="username">
+<button class="btn" type="submit" name="submit">Subscribe to monthly newsletter</button>
 </form>
 </div>
 
@@ -180,29 +183,36 @@ font-weight: bolder;
 </div>
 
  </div>
+ 
 
-  <!-- Sign-up form end -->
-<!-- <div class="msg">
-  <h1>Thanks for <br>subscribing!</h1>
-  <p>A confirmation email has been sent to ash@loremcompany.com. 
-    Please open it and click the button inside to confirm your subscription.
-  </p>
-  <button class="btn"> Dismiss message</button>
-</div> -->
-  <!-- Success message start -->
+  <?php
+  echo"hi";
+       if(isset($_POST['submit'])){
+        $email = isset($_POST['email']) ? $_POST['email'] : '';
+        $username=isset($_POST['username'])? $_POST['username']:'';
+        if($email == ""){
+            echo("<script>alert('Fill all info')</script>");
+        } else {
+          $con=mysqli_connect("localhost","root","","sam");
+          if(!$con) {
+            die("Connection failed: " . mysqli_connect_error());
+        }
+        $email=mysqli_real_escape_string($con,$email);
+           
+$query="INSERT INTO register  (username,email) VALUES  ('$username',$email')";
+try{
+  if(mysqli_query($con, $query)){
+    echo ("<script>alert('Successfully created!')</script>");
+  }
+  else{
+  echo ("<script>alert(' unable to created!')</script>");
+  }
+}
+catch(mysqli_sql_exception $e){
+  echo ("<script>alert(' unable to created!')</script>");
 
-  <!-- Thanks for subscribing!
-
-  A confirmation email has been sent to ash@loremcompany.com. 
-  Please open it and click the button inside to confirm your subscription.
-
-  Dismiss message -->
-
-  <!-- Success message end -->
-  
-  <!-- <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div> -->
+}
+    }}
+  ?>
 </body>
 </html>
